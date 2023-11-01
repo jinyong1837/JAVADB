@@ -1,0 +1,27 @@
+public class MIniSimulator  {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+        Duck mallard = new MallardDuck();
+        Duck rubber = new RubberDuck();
+        
+        mallard.display();
+        rubber.display();
+        
+        
+        mallard.performQuack(); 
+        rubber.performQuack();
+        
+        mallard.performFly();  
+        rubber.performFly();
+        
+        /*mallard.setFlyBehavior(new FlyNoWay());*/
+        
+        mallard.performFly();  
+       
+    }
+
+
+	}
+

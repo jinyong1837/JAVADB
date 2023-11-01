@@ -1,0 +1,43 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class MIniSimulator  {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+        Duck mallard = new MallardDuck();
+        Duck rubber = new RubberDuck();
+        Duck red = new ReadheadDuck();
+        Duck dec = new DecoyDuck();
+        Duck mod = new ModelDuck();
+        Duck mys = new MysteryDuck();
+        
+    /*    rubber.performFly();
+        rubber.performQuack();
+        rubber.display();
+       
+        mallard.display();
+        mallard.performQuack(); 
+        mallard.performFly(); 
+        
+        mallard.setFlyBehavior(new FlyNoWay());
+        mallard.performFly();  */
+        
+        List<Duck> arr = new ArrayList<Duck>();
+        
+        arr.add(mallard);
+        arr.add(rubber);
+        arr.add(red);
+        arr.add(dec);
+        arr.add(mod);
+        arr.add(mys);
+       
+        for(int i =0; i<arr.size(); i++) {
+        	System.out.println(i);
+        }
+    }
+
+
+	}
+

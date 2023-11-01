@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class MIniSimulator  {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+        Duck mallard = new MallardDuck();
+        Duck rubber = new RubberDuck();
+        Duck red = new ReadheadDuck();
+        Duck dec = new DecoyDuck();
+        Duck mod = new ModelDuck();
+        Duck mys = new MysteryDuck();
+        
+    /*    rubber.performFly();
+        rubber.performQuack();
+        rubber.display();
+       
+        mallard.display();
+        mallard.performQuack(); 
+        mallard.performFly(); 
+        
+        mallard.setFlyBehavior(new FlyNoWay());
+        mallard.performFly();  */
+        
+        List<String> display = new ArrayList<String>();
+        List<String> sound = new ArrayList<String>();
+        List<String> howtofly = new ArrayList<String>();
+        
+        display.add("저는 물오리입니다\n");display.add("저는 빨간 머리 오리입니다\n");display.add("저는 고무 오리입니다\n");display.add("저는 모형 오리입니다\n");display.add("저는 모델 오리입니다\n");display.add("저는 미스테리 오리입니다\n");display.add("\n");
+        sound.add("꽥\n");sound.add("꽥\\n");sound.add("삑\n");sound.add("<< 조용~ >>\n");sound.add("꽥\n");sound.add("<< 조용~ >>\n");sound.add("\n");
+        howtofly.add("날고 있어요!\n");howtofly.add("날고 있어요!!\n");howtofly.add("저는 못 날아요\n");howtofly.add("로켓 추진으로 날아갑니다\n");howtofly.add("저는 못 날아요\n ");howtofly.add("저는 못 날아요\n ");howtofly.add("저는 못 날아요\n ");
+        
+        
+
+        for(int i =0; i<8; i++) {
+        	System.out.println(display.get(i));
+        }
+    }
+
+
+	}
+

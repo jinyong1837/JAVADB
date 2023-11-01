@@ -1,0 +1,21 @@
+public class MIniSimulator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+        Duck mallard = new MallardDuck();
+        mallard.performQuack(); 
+           // This calls the MallardDuck's inherited performQuack() method,
+           // which then delegates to the object's QuackBehavior 
+           // (i.e. calls quack() on the duck's inherited quackBehavior
+           //  reference) 
+        mallard.performFly();  
+            // Then we do the same thing with MallardDuck's inherited
+            // performFly() method.
+        
+        mallard.display();
+    }
+
+
+	}
+

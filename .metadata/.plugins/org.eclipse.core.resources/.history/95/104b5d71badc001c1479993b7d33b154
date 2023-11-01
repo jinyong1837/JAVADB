@@ -1,0 +1,59 @@
+public abstract class Duck {
+	FlyBehavior flyBehavior; // 인터페이스를 활용하여 선언했다.
+    QuackBehavior quackBehavior; 
+    
+    public Duck() {}
+    
+    abstract void display(); // 각각 오리마다 생김새가 다르기 때문에 오버라이딩이 필요하다.
+    
+    public void performFly(){
+        flyBehavior.fly();      // Delegate to the behavior class
+    }
+ 
+    public void performQuack(){
+        quackBehavior.quack();  // Delegate to the behavior class
+    }
+    
+   /* public void swim() {
+        System.out.println("모든 오리는 물에 뜹니다. 가짜 오리도 뜨죠!");
+    }
+	*/
+    public interface QuackBehavior {
+    	public void quack(); // 인터페이스를 생성함으로써 Duck 추상클래스에서 QuackBehavior quackBehavior; 을 선언할 수 있다.
+    }
+	public class Quack implements QuackBehavior {
+		public void quack() {
+			System.out.println("꽥");
+		}
+	}
+	public class MuteQuack implements QuackBehavior {
+		public void quack() {
+			System.out.println("<< 조용>>");
+		}
+	}
+	public class Squeak implements QuackBehavior {
+		public void quack() {
+			System.out.println("삑");
+		}
+	}
+    
+    public interface FlyBehavior{
+    	public void fly();
+    }
+	public class FlyWithWings implements FlyBehavior {
+		public void fly() {
+			System.out.println("날고 있어요!!");
+		}
+	}
+	
+	public class FlyNoWay implements FlyBehavior {
+		public void fly() {
+			System.out.println("저는 못 날아요");
+		}
+	
+
+
+    }
+
+}
+

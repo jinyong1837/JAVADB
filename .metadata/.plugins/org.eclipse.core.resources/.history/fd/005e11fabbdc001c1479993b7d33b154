@@ -1,0 +1,18 @@
+public class InjuredDuck extends Duck{
+	public MallardDuck() {
+		 quackBehavior = new Quack();
+
+	     flyBehavior = new FlyNoWay();
+				// And it uses flyWithWings as its flyBehavior type
+	     }
+
+		public void display() {
+			System.out.println("저는 물오리입니다");
+		}
+		
+		
+		
+		
+	}
+	
+

@@ -1,0 +1,51 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class TEST {
+	
+	static Connection conn = null; //접속을 위한 객체
+	static Statement st = null;    //쿼리문을 보내기 위한 객체
+	static {
+		try {
+			/*DriverManager.getConnection(접속할주소,계정,비밀번호)*/
+			conn = DriverManager.getConnection("jdbc:mysql://192.168.166.101:4567/madang?serverTimezone=UTC","kkjjyy9808","wlsdyd1837##");
+			
+			st = conn.createStatement();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+try {
+			
+			ResultSet rs = st.executeQuery("show databases"); // ResultSet은 쿼리문을 보낸후 나온 결과를 가져올 때 사용한다.
+			
+			while(rs.next()) {
+				System.out.println(rs.getString("Database"));
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				
+				if(st != null)
+					st.close();
+				
+				if(conn != null)
+					conn.close();
+				
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+			
+		}
+		
+	}
+
+	}
+
+}
